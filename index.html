@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#180e1c">
+  <meta name="description" content="Celebrate Diwali with thoughtfully curated fireworks, delivered to your door or ready for takeaway.">
+  <title>Phooljhadi — Light up Diwali</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">A little sparkle, a lot of celebration <span>✦</span> Free delivery on orders over ₹2,000</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Phooljhadi home"><span class="brand-mark">✹</span><span>phooljhadi<small>THE DIWALI SHOP</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#shop">Shop crackers</a><a href="#about">Our promise</a></nav>
+    <button class="cart-trigger" id="cart-open" aria-label="Open cart"><span>Cart</span><span class="cart-count" id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div><div class="hero-copy">
+        <div class="eyebrow"><span></span> THE FESTIVAL OF LIGHTS</div>
+        <h1>Make room<br>for <em>magic.</em></h1>
+        <p>Bring home the sparkle of Diwali. Find your favourites, choose how they arrive, and let the celebrations begin.</p>
+        <a class="button button-primary" href="#shop">Explore the collection <span>↗</span></a>
+        <div class="hero-note"><span class="tiny-diya">✦</span> Made for moments worth remembering</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of glowing diyas and festive lights">
+        <div class="moon"></div><div class="star star-one">✦</div><div class="star star-two">✧</div><div class="star star-three">✦</div>
+        <div class="string-lights"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="rangoli"><div class="rangoli-inner"></div></div>
+        <div class="diya diya-left"><span></span><b></b></div><div class="diya diya-right"><span></span><b></b></div>
+        <div class="hero-caption">A BRIGHTER KIND OF TOGETHER</div>
+      </div>
+      <a class="scroll-cue" href="#shop">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <section class="benefits" id="about">
+      <div><span class="benefit-icon">⌂</span><span><strong>At your doorstep</strong><small>Home delivery available</small></span></div>
+      <div><span class="benefit-icon">✧</span><span><strong>Ready when you are</strong><small>Easy takeaway pickup</small></span></div>
+      <div><span class="benefit-icon">♡</span><span><strong>Celebrate thoughtfully</strong><small>Use only as directed</small></span></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><div class="eyebrow"><span></span> THE FESTIVE EDIT</div><h2>Pick your <em>spark.</em></h2></div><p>Little pops, big sparkle, and everything<br class="desktop-only"> in between. Find your Diwali favourite.</p></div>
+      <div class="filter-row"><span>10 handpicked favourites</span><label class="sort-label" for="sort">Sort by <select id="sort"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label></div>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="safety-note"><span>✧</span><p><strong>Celebrate with care.</strong> Please follow all product safety instructions, keep a safe distance, and check your local rules before use. Adult supervision required.</p></div>
+    </section>
+
+    <section class="delivery-banner"><div class="banner-diya">✹</div><div><div class="eyebrow">YOUR CELEBRATION, YOUR WAY</div><h2>We’ll bring the <em>glow.</em></h2><p>Choose doorstep delivery or takeaway pickup at checkout.</p></div><a href="#shop" class="button button-light">Find your favourites <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">✹</span><span>phooljhadi<small>THE DIWALI SHOP</small></span></a><p>Made for bright nights and good company.</p><span>© 2025 Phooljhadi</span></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">YOUR FESTIVE PICKS</span><h2>Your cart <span id="drawer-count">(0)</span></h2></div><button class="icon-button" id="cart-close" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span>✧</span><h3>Your cart is waiting to sparkle.</h3><p>Add a favourite and let the celebration begin.</p><button class="button button-primary" id="continue-shopping">Explore crackers</button></div>
+    <div class="cart-footer" id="cart-footer"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><p>Delivery and taxes calculated at checkout.</p><div class="fulfillment"><span>How would you like it?</span><label><input type="radio" name="fulfillment" value="delivery" checked> Home delivery</label><label><input type="radio" name="fulfillment" value="pickup"> Takeaway pickup</label></div><button class="button button-primary checkout-button" id="checkout">Continue to checkout <span>↗</span></button><small class="demo-note">Demo storefront · Checkout is not connected yet</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>✦</span><span id="toast-message">Added to your cart</span></div>
+</body>
+</html>
